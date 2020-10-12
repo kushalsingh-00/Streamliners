@@ -1,7 +1,7 @@
 package Task2.model;
 
 public class GroceryCartItem extends GroceryItem {
-    int price;
+    float price;
     float quantity;
 
     public GroceryCartItem(String name, int pricePerKg) {
@@ -34,7 +34,7 @@ public class GroceryCartItem extends GroceryItem {
     {
         GroceryCartItem cartItem=new GroceryCartItem(item.name,item.pricePerKg);
         cartItem.quantity=extractQuantity(quantityStr);
-        cartItem.price= (int) (cartItem.quantity*item.pricePerKg);
+        cartItem.price= cartItem.quantity*item.pricePerKg;
         return cartItem;
     }
 
