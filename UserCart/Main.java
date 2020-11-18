@@ -28,6 +28,10 @@ public class Main {
         Variant sugar5=new Variant("Sugar 5kg",220);
         Variant sugar10=new Variant("Sugar 10kg",400);
 
+        sugar.variants.add(sugar1);
+        sugar.variants.add(sugar5);
+        sugar.variants.add(sugar10);
+
         cart.addToCart(sugar,sugar1);
         cart.addToCart(sugar,sugar5);
         cart.addToCart(sugar,sugar10);

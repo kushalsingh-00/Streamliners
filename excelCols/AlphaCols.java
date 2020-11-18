@@ -1,3 +1,5 @@
+package excelCols;
+
 import java.util.Scanner;
 
 public class AlphaCols {
