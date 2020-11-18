@@ -12,11 +12,12 @@ public class main {
         GroceryItem g4=new GroceryItem("Rice",60);
 
         Cart cart=new Cart();
-        cart.add(GroceryCartItem.createNew(g1,"10kg 0g"))
-                .add(GroceryCartItem.createNew(g2,"2kg 500g"))
-                .add(GroceryCartItem.createNew(g3,"5kg 250g"))
+        cart.add(GroceryCartItem.createNew(g1,"10kg"))
+                .add(GroceryCartItem.createNew(g1,"2kg"))
+//                .add(GroceryCartItem.createNew(g3,"15"))
                 .add(GroceryCartItem.createNew(g4,"2kg 500g"));
 
+//        float a=GroceryCartItem.extractQuantity("15kg 400g");
         System.out.println(cart);
     }
 }

@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class TouristPlace implements Serializable {
-    String path="/root/IdeaProjects/Streamliners/src/Task3/places";
+    String path="/root/IdeaProjects/Streamliners/src/Task3/places.txt";
     String name;
     String workingHour;
     int entryTicketPrice;
@@ -34,6 +34,7 @@ public class TouristPlace implements Serializable {
     public void savePlacesToFile() throws IOException {
         FileOutputStream saveFile=new FileOutputStream(path);
         ObjectOutputStream stream= new ObjectOutputStream(saveFile);
+        
         stream.writeObject(placeList.values().toString());
     }
     @Override

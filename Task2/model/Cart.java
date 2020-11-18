@@ -14,17 +14,25 @@ public class Cart {
 
     public Cart add(GroceryCartItem item)
     {
-        cartItems.add(item);
-        totalAmmount+= item.price;
-        return this;
+        if(cartItems.contains(item.name))
+        {
+            totalAmmount=totalAmmount-cartItems.get(cartItems.indexOf(item.name)).price;
+            cartItems.get(cartItems.indexOf(item.name)).price=item.price;
+            totalAmmount+=item.price;
+        }
+        else {
+            cartItems.add(item);
+            totalAmmount += item.price;
+        }
+            return this;
     }
 
     @Override
     public String toString() {
         return "Cart{" +
-                "groceryCartItems=["+
-                cartItems+"\n"+
-                "],"+
+                "groceryCartItems="+
+                cartItems+
+                ","+
                 "totalAmmount = "+totalAmmount+
                 '}';
     }
